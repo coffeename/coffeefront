@@ -1,0 +1,68 @@
+.nav-header {
+  /* Замість fixed робимо absolute, щоб задати відступ згори вручну */
+  position: fixed;
+  margin-top: 10px;
+  /* Відступи ліворуч і праворуч */
+  left: 20px;
+  right: 20px;
+
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  /* Тінь, щоб форма “плавала” над фоном */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  z-index: 1000;
+}
+
+/* Вміст самої форми (меню) */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Якщо бажаєте обмежити максимальну ширину форми */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Домовимося, що Home більший за шрифтом */
+.home-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: bold; 
+  color: #333;            /* той самий колір, що й у .nav-link */
+  cursor: pointer;
+  text-decoration: none;  /* без підкреслення */
+}
+
+.logout-button:hover {
+  color: #007bff;         /* той самий колір ховера, що й у .nav-link:hover */
+  text-decoration: none;  /* підкреслення відключено */
+}

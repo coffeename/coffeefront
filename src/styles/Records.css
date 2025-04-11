@@ -1,0 +1,63 @@
+.records-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.records-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/analyticspage.png') center/cover no-repeat;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.records-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 1rem;
+  color: #000;
+}
+
+/* Контейнер для таблиці з фіксованою висотою та вертикальним скролом */
+.records-table-container {
+  max-height: 550px; /* Фіксована висота контейнера таблиці */
+  overflow-y: auto;  /* Вертикальна прокрутка, якщо даних більше */
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Стилі таблиці */
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-table th,
+.records-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.records-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;        
+    color: #fff;            /* Текст білим, якщо фон темний */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Псевдо-елемент ::before для блюру */
+  .home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/public/homepage.png') center/cover no-repeat;
+    filter: blur(5px);    /* розмиття*/
+    z-index: -1;           
+  }
+  
